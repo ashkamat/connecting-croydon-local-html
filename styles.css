@@ -1,0 +1,450 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import 'https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.css';
+@import 'https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/virtual-tour-plugin@5/index.css';
+@import 'https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/gallery-plugin@5/index.css';
+@import 'https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/markers-plugin@5/index.css';
+
+
+:root{
+
+  --cc-bright-purple: #A41896;
+  --cc-lilac: #A677D8;
+  --cc-green: #97C229;
+  --cc-dark-purple: #592C82;
+  
+  --banner-grad1:  var(--cc-green);
+  --banner-grad2: var( --cc-lilac);
+
+  --color-purple: #6A3B8E;
+  --color-litePurple: #aa15ac;
+  --color-red: #C50000;
+  --color-green: #5B9D2C;
+  --color-orange: #F77B00;
+  --color-light-blue: #A1BFD4;
+  --color-yellow: #FFD700;
+  --color-pink: #FF008C;
+  --color-dark-green: #006400;
+  --color-teal: #00A896;
+  --color-dark-blue: #3C5D8F;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    
+ 
+}
+
+
+body, html, #viewer{
+  height: 100%;
+
+}
+
+body{
+
+  font-family: "Poppins", sans-serif;
+
+    position: relative;
+    min-height: 100vh;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+  
+}
+
+img{
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color:  #000;
+  font-size: .8rem;
+}
+
+h1{
+    font-family: "Bodoni Moda", serif;
+    font-size: 5rem;
+    line-height: 4rem;
+    background-color:#ffffff4f;
+    padding: 2rem;
+    border-radius: 4px;
+    
+}
+
+h2{
+
+  font-size: 3rem;
+      font-weight: 200;
+
+}
+
+h3{
+
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+header{
+
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+      .menuBar{
+
+          display: flex;
+          align-items: center;
+        
+
+              nav{
+
+                  margin-right: 3rem;
+              }
+
+
+              nav ul {
+              display: flex;
+              gap:2rem;
+                  li{
+                      list-style: none;
+
+                      li a{
+                        
+                      }
+                  }
+
+
+              }
+
+
+      }
+}
+
+.logoHeader{
+  width: 150px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #98c22b;
+  color: white;
+  text-decoration: none; /* removes underline */
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--color-litePurple);
+}
+
+/* Optional: Make it behave like a block button */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+
+.video-container {
+    position: relative;
+    z-index: -1;
+  
+  width: 100vw;
+  height: 60vh;
+
+  overflow: hidden;
+}
+
+
+.background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--banner-grad1),var(--banner-grad2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;   
+  mix-blend-mode: overlay;
+
+  svg{
+    width: 80%;
+    mix-blend-mode: color-burn;
+
+  }
+}
+
+
+.classCountDownContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  width:100%;
+  height:100%;
+  background-color: #00000053;
+}
+
+.timebox{
+    display: flex;
+    gap: 5rem;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.time{
+    text-align: center;
+}
+
+
+/* section common */
+section{
+  height: 100%;
+
+    .header{
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--cc-dark-purple);
+      
+    }
+
+
+}
+
+
+
+.videoAndBookingForm{
+  display: flex;
+  height: 400px;
+
+  .left{
+    width: 50%;
+    video{
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  .right{
+    width: 50%;        
+   height: 100%;
+
+  }
+}
+
+
+section.threeSixty{
+    
+height: 500px;
+margin-bottom: 3rem;
+
+
+}
+
+
+
+
+#viewer{
+
+  width: 100%; 
+  height: 100%;
+  background-color: darkblue;
+
+
+}
+
+.eventbriteContainer{
+
+background-color: #357abd;
+height: 400px;
+}
+
+section.homePageContactForm{
+  height: 100%;
+
+
+  .formAndImageHolder{
+    display: flex;
+   
+
+      .left{
+        width: 50%;
+
+      }
+       .right{
+        width: 50%;
+        
+      }
+  }
+}
+
+
+
+.formClass{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+    input, .textInput{
+
+      border: 1px solid black;
+      padding:10px;
+      border-radius: 8px;
+    }
+}
+
+
+
+
+
+footer{
+    height: 600px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    .left, .middle, .right{
+
+        text-align: left;
+ 
+        width: 33%;
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 987px) {
+ 
+      h2{
+
+      font-size:3rem;
+          font-weight: 200;
+      }
+
+      .timebox{
+      
+        gap:2rem;
+
+      }
+
+         .videoAndBookingForm{
+        flex-direction: column;
+
+        height: 100%;
+          .left{
+          width: 100%;
+      
+
+          }
+
+          .right{
+            width: 100%;        
+      
+          }
+        
+      }
+
+
+
+}
+/* end of tablet query */
+
+
+
+@media only screen and (max-width: 600px) {
+ 
+
+     h2{
+      font-size:2.5rem;
+          font-weight: 200;
+      }
+
+      .timebox{
+        gap:1rem;
+      }
+
+
+      /* cc svg size on mobile */
+      .overlay {
+
+      svg{
+        width: 100%;
+
+      }
+      }
+
+
+
+      section.homePageContactForm{
+  height: 100%;
+
+
+  .formAndImageHolder{
+    display: flex;
+    flex-direction: column;
+
+      .left{
+        width: 100%;
+
+      }
+       .right{
+        width: 100%;
+        
+      }
+  }
+}
+/* end of mobile media query */
+
+
+
+
+
+   
+
+}
+
+
+
