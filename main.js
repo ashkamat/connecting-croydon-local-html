@@ -98,7 +98,7 @@ const nodes = [
 
 new Viewer({
     container: 'viewer',
-    loadingImg: "images/loader.gif",
+    loadingImg: "images/preloader.gif",
     touchmoveTwoFingers: true,
     mousewheelCtrlKey: true,
     defaultYaw: '0deg',
@@ -106,7 +106,6 @@ new Viewer({
 
     plugins: [
         MarkersPlugin,
-    
         VirtualTourPlugin.withConfig({
             positionMode: 'gps',
             renderMode: '3d',
@@ -138,14 +137,7 @@ navbar: [
         "fullscreen"
     ],
 
-    plugins: [
-        CompassPlugin.withConfig({
-            hotspots: [
-                { yaw: '45deg' }, 
-                { yaw: '60deg', color: 'red' },
-            ],
-        }),
-    ],
+
 
 
 

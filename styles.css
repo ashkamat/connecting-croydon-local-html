@@ -42,6 +42,7 @@
 
 body, html, #viewer{
   height: 100%;
+  scroll-behavior: smooth;
 
 }
 
@@ -55,6 +56,19 @@ body{
     text-decoration: none;
     overflow-x: hidden;
   
+}
+
+/* preloader overlays everthing until load function in the main.js is complete then is set to hidden */
+#preLoader {
+  position: fixed;
+  background-image:url(images/preloader.gif) ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
 }
 
 img{
@@ -112,7 +126,7 @@ header{
 
               nav ul {
               display: flex;
-              gap:2rem;
+              gap:1rem;
                   li{
                       list-style: none;
 
@@ -331,22 +345,107 @@ section.homePageContactForm{
 
 
 
+/* main footer semantic outter */
 footer{
-    height: 600px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-
-    .left, .middle, .right{
-
-        text-align: left;
  
-        width: 33%;
+
+    width: 100vw;
+    padding: var(--globalPaddingLR);
+    margin-top: 2rem;
+ 
+    /* inner footer */
+    .footerInner{
+        padding-top: 8px;
+
+        display: flex;
+        position: relative;
+        flex-direction: row;
+      
+        justify-content: center;
+        border-top: .1rem solid var(--ExtraDarkBlueBlackText);
+
     }
 
+
+    p{
+
+        font-size: var(--psmall);
+        color: var(--ExtraDarkBlueBlackText);
+    }
+    
+    
+    /* fist colume in footer description andlog */
+    
+    #footer-Colume-1{
+        width: 100%;
+        text-align: center;
+
+
+        /* therapeutic footer to upp */
+        p:nth-child(2){
+           
+            text-transform: uppercase;
+            
+        }
+
+        /* litewaves.org credits text style */
+        p:nth-child(3){
+
+           
+        }
+
+        /* early intervention description */
+        p:nth-child(4){
+            margin-top: 8px;
+           
+        }
+        
+        
+    }
+    
+    #main-footer, #footer-Colume-1, #secondary-footer,  #secondary-footer, #third-footer{
+    
+        /* background-color: #4AE5DD; */
+        width: 100%;
+    
+    
+    }
+    
+    /* innter Footer Links displayed columte */
+    #main-footer .footer-links, #secondary-footer .secondary-links, #third-footer .third-links {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        list-style: none;
+        text-align: left;
+        color: var(--ExtraDarkBlueBlackText);
+      
+    }
+
+    /* footer links styles */
+    #main-footer .footer-links li a, #secondary-footer .secondary-links li a, #third-footer .third-links li a {
+    text-decoration: none;
+    font-size: var(--psmall);
+    color: var(--ExtraDarkBlueBlackText);
+  
    
+    }
+
+    .credits{
+        text-align: center;
+        padding: 16px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:4px
+        
+    }
+    .credits a{
+
+        text-decoration: none;
+        color: var(--ExtraDarkBlueBlackText);
+    }
+
+
 }
 
 
@@ -436,14 +535,51 @@ footer{
       }
   }
 }
+
+
+/* ////////////// footer mobile /////////////////*/
+    footer .footerInner{
+
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: var(--globalPaddingTBLR);
+    
+    
+    }
+
+
+    /* innter Footer Links displayed colume */
+#main-footer .footer-links, #secondary-footer .secondary-links, #third-footer .third-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    list-style: none;
+    align-items: center;
+  
+    color: var(--ExtraDarkBlueBlackText);
+    
+    
+}
+
+
+  
+  }
+
+.flex-column {
+  flex-direction: column;
+}
+
+
+
+
+
 /* end of mobile media query */
 
-
-
-
-
-   
-
+  
 }
 
 

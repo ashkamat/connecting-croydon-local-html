@@ -28,6 +28,9 @@
 
 <body>
 
+
+    <div id="preLoader"></div>
+
     <header>
    <div class="logoHeader">
    <img src="images/Connecting-Croydon_logo.png" alt="">
@@ -36,19 +39,16 @@
     <nav>
 
         <ul>
-            <!-- <li><a href="http://">TBXH Home</a></li>
-             <li><a href="http://">About Us</a></li>
-             <li><a href="http://">Our Services</a></li>
-             <li><a href="http://">News</a></li>
-             <li><a href="http://">More</a></li>
-             <li><a href="http://">Contact Us</a></li> -->
+          
+             <li><a href="#">Team</a></li>
+             <li><a href="#">About</a></li>
         </ul>
     </nav>
 
     
     <!-- <h3 style="margin-right: 2rem">020 8680 4411</h3> -->
 
-   <a href="/your-page" class="btn">Contact</a>
+   <a href="#homePageContactForm" class="btn">Contact</a>
 
 
    </div>
@@ -62,7 +62,7 @@
         <div class="video-container">
 
                 <!-- video start -->
-                <video muted -autoplay playsinline loop class="background-video">
+                <video muted autoplay playsinline loop class="background-video">
                     <source src="videos/cc web banner master timelin3_1280_youtubed.mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -177,7 +177,7 @@
 
 
 <!-- contact Form -->
-<section class="homePageContactForm">
+<section class="homePageContactForm" id="homePageContactForm">
 
     <!-- header for section -->
         <div class="header">
@@ -225,11 +225,53 @@
 
 </main>
 
+    <footer>
+      <div class="footerInner">
+
+          <!-- colume one with logo -->
+          <div id="footer-Colume-1">
+            <img style ="width:48px" src="images/favicon.png" alt="">
+            <p>Connecting Croydon</p>
+            <p>toward the greater good
+            </p>
+          </div>
+
+          <footer id="main-footer">
+            <h5>Main Menu</h5>
+          </footer> 
+          
+      
+          <footer id="secondary-footer">
+            <h5>Direct Links</h5>
+          </footer>
+       
+          
+          <footer id="third-footer">
+           <h5>Connect</h5>
+          </footer>
+        </div>
+
+        <div class="credits">
+
+          <p>&copy Conneting Croydon 2025</p>
+        </div>
+
+    </footer>
 
 
 
 
+<script>
+// preloader
 
+let preLoader = document.querySelector("#preLoader")
+console.log(preLoader);
+
+window.addEventListener("load",function(){
+    preLoader.style.display = "none"
+})
+// preloader end
+</script>
 
 
 <script type="importmap">
