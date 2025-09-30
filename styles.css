@@ -95,6 +95,7 @@ h2{
 
   font-size: 3rem;
       font-weight: 200;
+      line-height: 3rem;
 
 }
 
@@ -102,6 +103,15 @@ h3{
 
     font-weight: 200;
     font-size: 2rem;
+  
+}
+
+
+h4{
+
+    font-weight: 200;
+    font-size: 1.5rem;
+  
 }
 
 header{
@@ -120,13 +130,13 @@ header{
 
               nav{
 
-                  margin-right: 3rem;
+                  margin-right: 1rem;
               }
 
 
               nav ul {
               display: flex;
-              gap:1rem;
+              gap:12px;
                   li{
                       list-style: none;
 
@@ -220,19 +230,33 @@ header{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-
   width:100%;
   height:100%;
   background-color: #00000053;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  h2{
+    margin-bottom: 8px;
+  }
 }
 
 .timebox{
     display: flex;
     gap: 5rem;
     color: white;
+    border-bottom: 1px solid white;
+     border-top: 1px solid white;
+   
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 20%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
 }
 
 .time{
@@ -245,7 +269,7 @@ section{
   height: 100%;
 
     .header{
-      height: 48px;
+      height:96px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -282,7 +306,7 @@ section{
 section.threeSixty{
     
 height: 500px;
-margin-bottom: 3rem;
+margin-bottom: 6rem;
 
 
 }
@@ -350,27 +374,27 @@ footer{
  
 
     width: 100vw;
-    padding: var(--globalPaddingLR);
+ 
     margin-top: 2rem;
  
     /* inner footer */
     .footerInner{
-        padding-top: 8px;
+        padding-top: 1rem;
 
         display: flex;
         position: relative;
         flex-direction: row;
       
         justify-content: center;
-        border-top: .1rem solid var(--ExtraDarkBlueBlackText);
+        border-top: 12px solid var(--cc-dark-purple);
 
     }
 
 
     p{
 
-        font-size: var(--psmall);
-        color: var(--ExtraDarkBlueBlackText);
+        font-size: 12px;
+        color:var(--cc-dark-purple);
     }
     
     
@@ -403,10 +427,23 @@ footer{
         
     }
     
-    #main-footer, #footer-Colume-1, #secondary-footer,  #secondary-footer, #third-footer{
+    #main-footer, #footer-Colume-1, #secondary-footer, #third-footer{
     
         /* background-color: #4AE5DD; */
         width: 100%;
+
+
+
+        ul{
+
+          display: flex;
+          flex-direction: column;
+          gap:0px
+
+
+        }
+        
+        
     
     
     }
@@ -418,7 +455,8 @@ footer{
         list-style: none;
         text-align: left;
         color: var(--ExtraDarkBlueBlackText);
-      
+
+       
     }
 
     /* footer links styles */
@@ -430,6 +468,7 @@ footer{
    
     }
 
+  
     .credits{
         text-align: center;
         padding: 16px 0px;
@@ -449,9 +488,26 @@ footer{
 }
 
 
+.footerForm{
+
+ display: flex; flex-direction: column; width: 100%;
+            gap:8px; margin-top:8px; justify-content: center; align-items: start; text-align: center;
 
 
+}
 
+
+.ri-linkedin-box-line{
+
+ 
+  width: 200px
+} 
+
+
+li{
+  list-style: none;
+ 
+}
 
 
 
@@ -459,9 +515,16 @@ footer{
  
       h2{
 
-      font-size:3rem;
-          font-weight: 200;
+      font-size:2rem;
+      font-weight: 200;
+          margin-bottom: 4px;
+
       }
+
+      p{
+        font-size: 12px;
+      }
+     
 
       .timebox{
       
@@ -494,11 +557,19 @@ footer{
 
 
 @media only screen and (max-width: 600px) {
+
+  .footerForm{
+
+ display: flex; flex-direction: column; width: 100%;
+            gap:8px; margin-top:8px; justify-content: center; align-items: center; text-align: center;
+
+
+}
+
  
 
      h2{
-      font-size:2.5rem;
-          font-weight: 200;
+
       }
 
       .timebox{
@@ -547,7 +618,7 @@ footer{
         align-items: center;
         text-align: center;
         gap: 2rem;
-        padding: var(--globalPaddingTBLR);
+      
     
     
     }
@@ -569,18 +640,25 @@ footer{
   
   }
 
-.flex-column {
-  flex-direction: column;
+
+#secondary-footer{
+
+  ul li a{
+    width: 100px;
+  }
 }
 
 
+#third-footer h5{
 
+  margin-bottom: 4px;
+}
 
 
 /* end of mobile media query */
 
   
-}
+
 
 
 
