@@ -19,8 +19,12 @@ Text Domain: my-theme
     box-sizing: border-box;
 }
 
-
 :root{
+
+  --debugBlue: 2px solid rgb(72, 0, 255);
+    --debugPink: 2px solid rgb(255, 0, 251);
+      --debugYellow: 2px solid rgb(242, 255, 0);
+
 
   --cc-bright-purple: #A41896;
   --cc-lilac: #A677D8;
@@ -51,6 +55,21 @@ Text Domain: my-theme
 
 }
 
+
+.preLoader {
+  position: fixed;
+  background-image: url(/images/preloader.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-color: var(--color-light-blue-BG);
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+
+
+}
+
 .purple{
   background-color: var(--cc-bright-purple);
 }
@@ -72,6 +91,7 @@ Text Domain: my-theme
 body{
    font-family: "Poppins", sans-serif;
    font-weight: 200;
+   position: relative;
  
 }
 main{
@@ -143,9 +163,7 @@ h5{
 }
 
 
-blockquote{
-  font-style: italic;
-}
+
 
 .fontWeight400{
   font-weight: 400;
@@ -259,7 +277,8 @@ section.team{
 
 
 
-/* /////////////////Blog /////////////////////////// */
+/* /////////////////Blog main start /////////////////////////// */
+
 
 
 section.blogHeadlineSubHeadline{
@@ -275,23 +294,45 @@ section.blogHeadlineSubHeadline{
       h3{
 
         font-weight: 600;
+      
       }
 
       .left{
         width: 66%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+     }
+
       }
 
       .right{
         width: 33%;
+        display: flex;
+        align-items: center;
+        text-align: center;
       }
 
      
   
+
+
+blockquote{
+  font-style: italic;
+  padding-left: var(--globalPadding);
+   padding-right: var(--globalPadding);
+    padding-top: 1rem;
+    text-align: center;
+ 
 }
 
+/* big image */
 .blog-featured-image{
   width: 100%;
   position: relative;
+
+  /* logo bottom right */
   .logoImage{
     position: absolute;
     width: 16%;
@@ -351,6 +392,7 @@ section.blogHeadlineSubHeadline{
 
 /* new FSGallery START */
 
+
 .fsGalleryContainer{
 
     display: grid;
@@ -358,6 +400,8 @@ section.blogHeadlineSubHeadline{
       width: 100%;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       position: relative;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       img{
            border-radius: .3rem;
       }
@@ -811,13 +855,35 @@ width: 30%;
 @media only screen and (max-width: 1320px) {
 
   body{
-    border: 3px solid yellow;
+    border: var(--debugYellow);
   }
 
 /* /////////////////Blog 1320px/////////////////////////// */
 .blog-featured-image{
   width: 50%;
 }
+
+.blog-featured-image{
+  width: 100%;
+  position: relative;
+  .logoImage{
+    position: absolute;
+    width: 16%;
+    bottom:3rem;
+    right: 1.3rem
+  }
+
+  .blogFeaturedImageInside{
+
+      border-bottom-right-radius: 3rem;
+      border-bottom-left-radius: .5rem;
+
+  }
+  
+}
+
+
+
 
 .blogContent{
   display: flex;
@@ -845,8 +911,10 @@ width: 30%;
 @media only screen and (max-width: 1080px) {
 
   body{
-    border: 3px solid blue;
+    border: var(--debugBlue);
   }
+
+
  
       h2{
 
@@ -901,14 +969,18 @@ width: 30%;
   
       h2{
         font-weight: 600;
+        line-height: 3.2rem;
       }
       h3{
 
         font-weight: 600;
+      
       }
 
       .left{
         width: 100%;
+       
+
       }
 
       .right{
@@ -917,9 +989,26 @@ width: 30%;
   
 }
 
+
+blockquote{
+
+ width: 100%;
+    
+}
+
+  /* less than 1080 adjusts bottom right corner radius */
     .blog-featured-image{
       width: 100%;
+
+        .blogFeaturedImageInside{
+
+      border-bottom-right-radius: 2rem;
+      border-bottom-left-radius: .5rem;
+
+      }
+
     }
+
 
     .blogContent{
       display: flex;
@@ -938,7 +1027,9 @@ width: 30%;
 
     }
 
-    /* /////////////////////////////Blog end 1320px/////////////////////// */
+    
+
+    /* /////////////////////////////Blog end 1080px/////////////////////// */
 
 
 
@@ -957,12 +1048,14 @@ width: 30%;
 
     body{
 
-      border: 3px solid rgb(255, 0, 221);
-  }
+        border: var(--debugPink);
+    
+    }
 
-  section{
-    flex-direction: column;
-  }
+    section{
+      flex-direction: column;
+  
+    }
 
 
   .pageBanner{
@@ -1000,19 +1093,17 @@ width: 30%;
 
   .footerForm{
 
- display: flex; 
- flex-direction: column; 
- width: 100%;
- gap:8px; 
-margin-top:8px; 
+  display: flex; 
+  flex-direction: column; 
+  width: 100%;
+  gap:8px; 
+  margin-top:8px; 
   justify-content: center; 
-   align-items: center; 
+  align-items: center; 
   text-align: center;
 
+  }
 
-}
-
- 
 
      h2{
 
@@ -1029,13 +1120,7 @@ margin-top:8px;
       svg{
         width: 100%;
 
+        }
       }
-      }
 
-
-
-      
-
-
-  
-  }
+}
