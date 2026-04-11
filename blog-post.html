@@ -26,22 +26,35 @@
   
 <header class="site-header">
 
+
             <div class="headerLogo">
                 <img src="/images/Connecting-Croydon_logo.png" alt="connecting croydon logo">
-                
             </div>
      
 
 
            
-        <div class="navAndCTA">
-       
-          
-                
-                <a href="#" class="btn bgColourMain">Book</a>
+            <nav class="HeaderNavCTA">
 
-        
-        </div>
+                <ul>
+                  <a href="http://"><li>Link 1</li></a>
+                    <a href="http://"><li>Link 1</li></a>
+                      <a href="http://"><li>Link 1</li></a>
+                        <a href="http://"><li>Link 1</li></a>
+                          <a href="http://"><li>Link 1</li></a>
+                </ul>
+
+                <button class="hamburger-Close-Icon" id="openBtn"  aria-controls="mobileMenu"
+  aria-expanded="false"
+  aria-label="Open menu">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+                </button>
+  
+                    
+                    <a href="#" class="btn bgColourMain">Books</a>
+
+            
+            </nav>
 
 
 </header>
@@ -180,11 +193,30 @@
 
     <footer class="footer">
 
-    </footer>
+
+
+   
+
+  <div class="mobile-menu_panel" id="mobileMenu" class="mobile-menu" aria-hidden="true">
+
+      <div class="mobile-menu__overlay"></div>
+
+    
+   <button class="hamburger-Close-Icon" id="closeBtn" aria-label="Close menu">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+                </button>
+   
+    <h3>Menu here</h3>
+  </div>
+
+</div>
 
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+   
     <script src="./js/fslightbox.js"></script>
     <script src="countDown.js"></script>
     <script src="main.js"></script>

@@ -70,6 +70,86 @@ Text Domain: my-theme
 
 }
 
+/* mobile menu */
+
+a{
+  text-decoration: none;
+}
+
+ul{
+
+}
+
+ul li{
+
+  list-style: none;
+}
+
+.HeaderNavCTA{
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+    ul{
+      display: flex;
+      gap: 2rem;
+    }
+
+
+}
+
+
+/* mobile hamburger displays above 820 media query */
+.hamburger-Close-Icon{
+  
+  width: 40px;
+  height: 40px;
+  background-color: #A677D8;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  display: none;
+}
+
+.hamburger-Close-Icon path {
+  stroke: #F5fbff;
+  stroke-linecap: round;
+  fill:  #F5fbff;;
+}
+
+
+.hamburger-Close-Icon:hover{
+  background-color: var(--cc-dark-purple);
+}
+
+.hamburger-Close-Icon:hover path {
+  stroke: #ffffff;
+}
+
+
+/* slide panel */
+.mobile-menu_panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  max-width: 324px;
+  height: 100%;
+  background:var(--color-light-blue-BG);
+  transition: transform 0.3s;
+display: none;
+z-index: 1000;
+}
+
+/* active states */
+.mobile-menu.active .mobile-menu__overlay {
+  opacity: 1;
+}
+
+
+/* colours */
+
 .purple{
   background-color: var(--cc-bright-purple);
 }
@@ -86,8 +166,11 @@ Text Domain: my-theme
   background-color: var(--cc-dark-purple);
 }
 
+/* colours */
 
 
+
+/* body */
 body{
    font-family: "Poppins", sans-serif;
    font-weight: 200;
@@ -852,6 +935,7 @@ width: 30%;
 
 /* ///////////////////////footer end ////////////////// */
 
+/* desktop */
 @media only screen and (max-width: 1320px) {
 
   body{
@@ -908,6 +992,7 @@ width: 30%;
 }
 
 
+/* in between tablet and mobile */
 @media only screen and (max-width: 1080px) {
 
   body{
@@ -1036,7 +1121,36 @@ blockquote{
 }
 /* end of tablet query */
 
+/* hamburger kick in */ 
+/* hide main menu at the top */
+@media only screen and (max-width: 820px){
 
+  /* slide panel */
+.mobile-menu_panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 90%;
+  height: 100%;
+  background:var(--color-light-blue-BG);
+
+display:flex;
+}
+
+
+  .hamburger-Close-Icon{
+    display: block;
+  }
+
+
+  .HeaderNavCTA{
+    flex-direction: row-reverse;
+    ul{
+      display: none;
+    }
+  }
+}
 
 @media only screen and (max-width: 600px) {
 
