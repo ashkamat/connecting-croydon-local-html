@@ -1131,17 +1131,39 @@ blockquote{
   top: 0;
   right: 0;
   width: 80%;
-  max-width: 90%;
+  max-width: 320px;
   height: 100%;
   background:var(--color-light-blue-BG);
+  display:flex;
+  flex-direction: column;
 
-display:flex;
+ 
+
 }
 
-
-  .hamburger-Close-Icon{
-    display: block;
+.mobileNav{
+    color: var(--cc-dark-purple);
+    margin: var(--globalPadding);
+    border: 2px solid yellow;
+    display: flex;
+    
   }
+
+  .hamburger-Close-Icon {
+    display: block;
+   
+  }
+
+  #closeBtn{
+
+ 
+    position: absolute;
+    right:42px;
+    top:28px;
+   
+   
+  }
+
 
 
   .HeaderNavCTA{
